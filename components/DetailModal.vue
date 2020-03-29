@@ -130,7 +130,7 @@ export default {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   margin: auto;
-  width: 60%;
+  width: 100%;
   max-width: 480px;
   max-height: 90vh;
   overflow-y: auto;

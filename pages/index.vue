@@ -23,7 +23,7 @@
           default-option="Alle anzeigen"
           @selected="filterSchoolArea"
         >
-          <template #label>Schulamtsbereich wählen</template>
+          <template #label>Nach Schulamtsbereich filtern</template>
         </SelectGroup>
         <SelectGroup
           class="mb-1"
@@ -31,7 +31,7 @@
           default-option="Alle anzeigen"
           @selected="filterSupportOption"
         >
-          <template #label>Zweck wählen</template>
+          <template #label>Nach Unterstützungsmöglichkeit filtern</template>
         </SelectGroup>
       </div>
       <!--<SelectGroup
@@ -70,7 +70,10 @@
     </div>
     <section class="mt-2">
       <b>Ihr Eintrag fehlt oder sie kennen einen Partner, der hier vertreten sein sollte?</b>
-      <br>Dann melden sie sich unter email@merci-fehlt-noch.de
+      <br>Dann melden sie sich unter
+      <a
+        href="mailto: email@merci-fehlt-noch.de"
+      >email@merci-fehlt-noch.de</a>
     </section>
     <section class="footer mt-2 mb-2">© Apolda 2020. Alle Rechte vorbehalten.</section>
     <DetailModal :opened.sync="modalOpened" :location="selectedLocation"/>

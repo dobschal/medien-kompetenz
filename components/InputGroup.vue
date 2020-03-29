@@ -10,7 +10,7 @@
         @keyup="emitChange"
         :value="value"
         autofocus
-        placeholder="Address oder Suchbegriff eingeben..."
+        placeholder="Addresse oder Suchbegriff eingeben..."
       >
       <button type="submit" v-if="showButton">
         <slot name="button-text"></slot>
