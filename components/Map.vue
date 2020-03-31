@@ -6,44 +6,11 @@
     :zoom="startZoom"
   >
     <GMapMarker
-      v-for="location in locations"
-      :key="location.lat + '' + location.lng"
+      v-for="(location, index) in locations"
+      :key="index"
       :position="location"
       @click="$emit('update:selectedLocation', location)"
     >
-      <!--<GMapInfoWindow width="500">
-        <code>
-          <div class="marker-text">
-            <h3 class="mb-1">{{ location.title }}</h3>
-            <div class="row">
-              <div>Träger</div>
-              <div>{{ location.carrier }}</div>
-            </div>
-            <div class="row">
-              <div>Leiter</div>
-              <div>{{ location.lead }}</div>
-            </div>
-            <div class="row">
-              <div>Adresse</div>
-              <div>{{ location.address }}</div>
-            </div>
-            <div class="row">
-              <div>Kontakt</div>
-              <div>
-                <b>E-Mail:</b>
-                <a :href="'mailto¸: ' + location.mail">{{ location.mail }}</a>
-                <br>
-                <b>Telefon:</b>
-                <a :href="'tel: ' + location.phone">{{ location.phone }}</a>
-                <br>
-                <b>Fax:</b>
-                <a :href="'tel: ' + location.fax">{{ location.fax }}</a>
-                <br>
-              </div>
-            </div>
-          </div>
-        </code>
-      </GMapInfoWindow>-->
     </GMapMarker>
   </GMap>
 </template>
@@ -245,24 +212,6 @@ export default {
 </script>
 
 <style scoped>
-/*>>> .marker-text {
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  line-height: 1.33rem;
-}
-
->>> .marker-text h3 {
-  font-size: 1rem;
-}
-
->>> .marker-text .row > div:nth-child(2) {
-}
-
->>> .marker-text .row > div:first-child {
-  font-weight: bold;
-  min-width: 60px;
-  flex-grow: 0;
-}*/
 
 >>> .GMap__Wrapper {
   height: 80vh;

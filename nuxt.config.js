@@ -10,14 +10,14 @@ export default {
    ** Doc: https://vue-meta.nuxtjs.org/api/#metainfo-properties
    */
   head: {
-    title: "Thüringermedienkompetenznetzwerkpartner",
+    title: "Thüringer Medienkompetenzpartner",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Official Nuxt.js starter for CodeSandBox"
+        content: "Thüringer Medienkompetenzpartner"
       }
     ],
     link: [
@@ -54,9 +54,7 @@ export default {
       {
         key: "AIzaSyCWy_hDWEoKV1Qo-l-gRajLXfmlWWiocqE"
       }
-    ],
-    // TODO: Remove it if you want to eject from codeSandbox
-    "./codesandbox"
+    ]
   ],
 
   /*

@@ -41,12 +41,18 @@
             </div>
           </div>
           <div class="row">
+            <div>Unterstützungsmöglichkeit:</div>
+            <div v-html="support"></div>
+          </div>
+          <div class="row">
             <div>Angebote:</div>
             <div v-html="offers"></div>
           </div>
           <div class="row">
-            <div>Zwecke:</div>
-            <div v-html="support"></div>
+            <div>Links:</div>
+            <div>
+              <a :href="link" v-for="link in location.link" :key="link" target="_blank">{{ link }}</a>
+            </div>
           </div>
         </div>
       </div>
@@ -74,20 +80,20 @@ export default {
   computed: {
     offers() {
       if (!this.location) return "";
-      return this.location.offers
+      return " - " + this.location.offers
         .map(id => {
           return (offers.find(offer => offer.id === id) || {}).title;
         })
-        .join("<br>");
+        .join("<br> - ");
     },
     support() {
       if (!this.location) return "";
-      return this.location.supportOptions
+      return " - " + this.location.supportOptions
         .map(id => {
           return (supportItems.find(supportItem => supportItem.id === id) || {})
             .title;
         })
-        .join("<br>");
+        .join("<br> - ");
     }
   },
   watch: {
@@ -131,7 +137,7 @@ export default {
   transition: opacity 0.5s ease-in-out;
   margin: auto;
   width: 100%;
-  max-width: 480px;
+  max-width: 640px;
   max-height: 90vh;
   overflow-y: auto;
   background-color: white;
@@ -167,7 +173,10 @@ export default {
 
 .row > div:first-child {
   font-weight: bold;
-  min-width: 60px;
+  min-width: 100px;
   flex-grow: 0;
+  max-width: 120px;
+  word-break: break-all;
+  hyphens: auto;
 }
 </style>

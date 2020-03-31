@@ -4,11 +4,11 @@
       <Icon></Icon>
       <h1>
         Thüringer
-        <span>Medienkompetenz</span>netzwerkpartner im Überblick
+        Medienkompetenzpartner im Überblick
       </h1>
       <p class="mt-1">
         Finden sie schnell und einfach interessante Angebote regionaler Medienkompetenzpartner.
-        Nutzer sie bitte die folgenden Filtern, um ihre Suche zu einzuschränken.
+        Nutzen sie bitte die folgenden Filtern, um ihre Suche zu vereinfachen.
       </p>
     </section>
     <section class="filter mt-2">
@@ -34,14 +34,6 @@
           <template #label>Nach Unterstützungsmöglichkeit filtern</template>
         </SelectGroup>
       </div>
-      <!--<SelectGroup
-        class="mb-1"
-        :options="offerOptions"
-        default-option="Alle anzeigen"
-        @selected="filterOffer"
-      >
-        <template #label>Angebot wählen</template>
-      </SelectGroup>-->
     </section>
     <div class="row-lg result-area mt-1">
       <section class="map">
@@ -55,8 +47,8 @@
       <section class="list">
         <ul>
           <li
-            v-for="location in locationsFiltered"
-            :key="location.lat + '' + location.lng"
+            v-for="(location, index) in locationsFiltered"
+            :key="index"
             class="mb-1"
             title="Auf Karte zeigen"
             @click="showLocation(location)"
@@ -72,10 +64,10 @@
       <b>Ihr Eintrag fehlt oder sie kennen einen Partner, der hier vertreten sein sollte?</b>
       <br>Dann melden sie sich unter
       <a
-        href="mailto: email@merci-fehlt-noch.de"
-      >email@merci-fehlt-noch.de</a>
+        href="mailto:sascha@dobschal.eu"
+      >sascha@dobschal.eu</a>
     </section>
-    <section class="footer mt-2 mb-2">© Apolda 2020. Alle Rechte vorbehalten.</section>
+    <section class="footer mt-2 mb-2">© Apolda 2020. Alle Rechte vorbehalten. Für den Inhalt externer verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich. Die Richtigkeit der angegebenen Daten wird nicht garantiert. Alle Angaben sind ohne Gewähr! Diese Website verwendet keine Cookies. Bei Fragen melden sie sich bitte unter: sascha@dobschal.eu</section>
     <DetailModal :opened.sync="modalOpened" :location="selectedLocation"/>
   </div>
 </template>
@@ -206,6 +198,9 @@ export default {
   font-size: 0.8rem;
   line-height: 1.2rem;
   color: #505050;
+  text-align: center;
+  max-width: 680px;
+  margin: 4rem auto;
 }
 
 ul {
