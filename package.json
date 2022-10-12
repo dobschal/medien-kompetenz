@@ -15,7 +15,7 @@
     "@nuxt/http": "^0.3.0",
     "nuxt": "^2.5.1",
     "nuxt-gmaps": "1.1.9",
-    "read-excel-file": "^4.0.6",
+    "read-excel-file": "^5.5.1",
     "reqlim": "^0.0.0",
     "core-js": "^2.6.11"
   },
